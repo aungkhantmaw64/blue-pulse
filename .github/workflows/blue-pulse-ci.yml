@@ -1,0 +1,16 @@
+name: blue-pulse-ci 
+run-name: ${{ github.actor }} is runing blue-pulse-ci 
+on: [push]
+jobs:
+  ci-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build docker image
+        run: make build-docker-image
+
+      - name: Run unit-tests
+        run: make run-ci
+
