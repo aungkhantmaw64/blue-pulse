@@ -2,7 +2,7 @@ FROM debian:11-slim
 
 RUN apt-get update -y && apt-get install -y \
   build-essential python3-dev python3-pip python3-venv \
-  git curl wget cmake
+  git curl wget cmake cppcheck
 
 
 WORKDIR /app
