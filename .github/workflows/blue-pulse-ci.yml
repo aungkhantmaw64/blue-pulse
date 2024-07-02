@@ -1,5 +1,4 @@
 name: blue-pulse-ci 
-run-name: ${{ github.actor }} is runing blue-pulse-ci 
 on: [push]
 jobs:
   ci-run:
@@ -13,4 +12,5 @@ jobs:
 
       - name: Run unit-tests
         run: make run-ci
+        continue-on-error: false
 
